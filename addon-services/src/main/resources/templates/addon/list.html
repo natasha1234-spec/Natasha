@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Addon Offers</title>
+</head>
+<body>
+<div th:fragment="content">
+    <h1>Enhance Your Parking Experience with Our Addon Services</h1>
+    <div class="addon-container">
+        <div class="addon-card" th:each="addon : ${addons}">
+            <h3 th:text="${addon.name}">Addon Name</h3>
+            <p th:text="${addon.description}">Description</p>
+            <p>Price: $<span th:text="${addon.price}">0.00</span></p>
+            <a th:href="@{/addons/modify/{id}(id=${addon.id})}">Modify</a>
+            <a th:href="@{/addons/remove/{id}(id=${addon.id})}">Remove</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
