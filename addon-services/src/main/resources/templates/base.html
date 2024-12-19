@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Addon Services</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<header>
+    <h1>SMART PARKING SPOTS</h1>
+</header>
+<div class="sidebar">
+    <h2>Addon Services</h2>
+    <a th:href="@{/addons/new}">Create New Addon Pack</a>
+    <a th:href="@{/addons/modify/1}">Modify Addon Details</a>
+    <a th:href="@{/addons/view}">View All Addon Offers</a>
+    <a th:href="@{/addons/remove/1}">Remove an Addon Pack</a>
+</div>
+<div class="content">
+    <div th:insert="~{::content}"></div>
+</div>
+</body>
+</html>
