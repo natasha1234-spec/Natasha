@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Modify Addon</title>
+</head>
+<body>
+<div th:fragment="content">
+    <h1>Modify Addon Details</h1>
+    <form th:action="@{/addons/modify/{id}(id=${addon.id})}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" th:value="${addon.name}" required><br><br>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" th:text="${addon.description}" required></textarea><br><br>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" th:value="${addon.price}" step="0.01" required><br><br>
+        <button type="submit">Update Addon</button>
+    </form>
+</div>
+</body>
+</html>
