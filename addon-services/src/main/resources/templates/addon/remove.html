@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Remove Addon</title>
+</head>
+<body>
+<div th:fragment="content">
+    <h1>Remove Addon Pack</h1>
+    <p>Are you sure you want to remove this addon?</p>
+    <form th:action="@{/addons/remove/{id}(id=${addon.id})}" method="post">
+        <button type="submit">Remove</button>
+        <a th:href="@{/addons/view}">Cancel</a>
+    </form>
+</div>
+</body>
+</html>
